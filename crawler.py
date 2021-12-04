@@ -14,9 +14,13 @@ class Crawler(CrawlSpider):
         self.links = set()
         super(Crawler, self).__init__()
 
-
-
     def parse_item(self, response):
         domain = urlparse(response.url).netloc
-        f = open("links/"+domain+".txt", 'a')
-        f.write(response.url + "\n")
+        contains = False
+        for start_url in self.start_urls:
+            if response.url.startswith(start_url):
+                contains = True
+                break
+        if not contains:
+            f = open("links/" + domain + ".txt", 'a')
+            f.write(response.url + "\n")
