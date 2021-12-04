@@ -17,6 +17,11 @@ It is mainly made for reporting link lists to clearnet hosters of darknet forums
   - `allowed_domains`: If you want to restrict the links to domains to crawl (recommended: Leave as empty array: [] )
   - `start_urls`: The link where to start the scraping
 
+## Usage
+```bash python main.py```
+The script will make a directory called `links`.
+There will be all links scraped ordered by the different domain names.
+
 ## Onion Sites
 To use with the Tor network for onion sites just route all your traffic of the system throught the Tor Network.
 [Learn how to do that](https://www.wikihow.com/Route-All-Network-Traffic-Through-the-Tor-Network)
