@@ -1,0 +1,9 @@
+[
+  {
+    "name": "imdb",
+    "allowed_domains": [],
+    "start_urls": [
+      "https://www.imdb.com/"
+    ]
+  }
+]
